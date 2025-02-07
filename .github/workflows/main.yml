@@ -6,5 +6,7 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y python3-yaml
       - name: Run Feed Generator
         uses: planetoftheweb/podcast-generator@main
